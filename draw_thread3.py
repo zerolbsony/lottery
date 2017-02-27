@@ -5,17 +5,7 @@ import MySQLdb
 import sys
 
 '''
-这种写法可以完整将所有入口操作执行完
-遇到了lottery表：（amount原值为2）
-id  name           amount   updated  created
-1	Mac book pro	0	1488198816	1488077935
-
-lottery_record表：（大家都抢到了:(）
-id  uname   lottery_id  created
-15	黄厚生	1	1488198816
-16	熊炜	1	1488198816
-17	郭巍	1	1488198816
-18	陈锡乾	1	1488198816
+要满足商品库存不会成负数都前提下，中奖记录也不会记录多发
 '''
 
 class MyThread(threading.Thread):
